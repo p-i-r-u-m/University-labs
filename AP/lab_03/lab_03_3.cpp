@@ -23,7 +23,7 @@ int main()
 
     // розгалудження у повній формі 
     if ( x <= 0 )
-        y = -(x + R);
+        y = -((R*x/6) + R);
     else if ( x >= 0 && x <= R )
         y = -sqrt(pow(R, 2) - pow(x, 2));
     else if ( (x >= R) && (x <= (2*R)) )

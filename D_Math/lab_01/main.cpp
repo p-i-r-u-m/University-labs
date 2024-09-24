@@ -119,7 +119,7 @@ int main() {
                 cout << "Result 8: " << result_8 << endl;
                 cout << "Result 9: " << result_9 << endl;
                 cout << "Result 10: " << result_10 << endl;
- cout << "Result 7: " << result_7 << endl;               cout << "\nSecond Block result: " << second_block_result << "\n- - - - - - - - - - - -\n" << endl;
+               cout << "\nSecond Block result: " << second_block_result << "\n- - - - - - - - - - - -\n" << endl;
 
             }
 

@@ -24,7 +24,7 @@ int main()
     if ( x <= 4 )
         B = exp(log(2 + 2*x) + 2*x);
     if ( 4 < x && x <= 7 )
-        B = pow(exp(x) + abs(x), 2);
+        B = 1/tan( ((1+x)/9) + 8*x);
     if ( x > 7 )
         B = (1 - 7*x + pow(x, 2) - 2*pow(x, 3));
 
@@ -38,7 +38,7 @@ int main()
         B = (1 - 7*x + pow(x, 2) - 2*pow(x, 3));
     else
         if ( 4 < x && x <= 7 )
-            B = pow(exp(x) + abs(x), 2);
+            B = 1/tan( ((1+x)/9) + 8*x);
         else
             B = exp(log(2 + 2*x) + 2*x);
 
