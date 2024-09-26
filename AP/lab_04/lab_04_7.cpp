@@ -10,7 +10,7 @@ int main()
 
     int n = 0;
     
-    cout << "xp є (-1; 1] and xk є [-1; 1]" << endl;
+    cout << "xp є (-1; 1] and xk є (-1; 1]" << endl;
     
     do {
         cout << "xp = "; cin >> xp;
