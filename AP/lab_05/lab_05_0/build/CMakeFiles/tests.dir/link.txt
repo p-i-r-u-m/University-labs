@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/tests.dir/tests/test_lab_05_0.cpp.o -o tests   -L/data/data/com.termux/files/home/googletest/build/lib  -Wl,-rpath,/data/data/com.termux/files/home/googletest/build/lib -lgtest -lpthread
