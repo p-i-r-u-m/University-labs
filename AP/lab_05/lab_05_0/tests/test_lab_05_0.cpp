@@ -1,18 +1,18 @@
 #include <gtest/gtest.h>
+#include <cmath>
+#include <iostream>
 
-int Sum(int a, int b)
+double k(const double x, const double y);
+
+TEST(FunctionKTest, HandlesPositiveInput)
 {
-    return a+b;
+    EXPECT_NEAR(k(1, 2), (sin(1)/(2*2)) + (cos(2)/(1*1)), 1e-6);
+    EXPECT_NEAR(k(2, 3), (sin(2)/(3*3)) + (cos(3)/(2*2)), 1e-6);
 }
 
-TEST(SumTest, HandlesPositiveInput)
+double k(const double x, const double y)
 {
-    EXPECT_EQ(Sum(2, 3), 5);
-}
-
-TEST(SumTest, HandlesNegativeInput)
-{
-    EXPECT_EQ(Sum(-2, -3), -5);
+    return ( (sin(x)/(y*y) + (cos(y)/(x*x))) );
 }
 
 int main(int argc, char **argv)

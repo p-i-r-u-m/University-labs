@@ -7,10 +7,9 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(~/googletest/googletest/include)
 link_directories(~/googletest/build/lib)
 
-# Основний проєкт
+# Create the executable for running tests
 add_executable(main src/lab_05_0.cpp)
 
-# Проєкт для тестів
 add_executable(tests tests/test_lab_05_0.cpp)
 
 target_link_libraries(tests gtest pthread)
