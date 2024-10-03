@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 
 using namespace std;
 
@@ -18,10 +19,14 @@ int main()
 
     double p = pp;
 
+    cout << setw(5) << "p" << " : " << setw(5) << "r" << endl;
+    cout << "------------------" << endl;
+
+
     while (p <= pk)
     {
         r = z(p*p + 1) - z(p*p - 1) + 2*z(p);
-        cout << p << " " << r << endl;
+        cout << setw(5) << p << " : " << setw(5) << setprecision(5) << r << endl;
         p += dp;
     }
 }
