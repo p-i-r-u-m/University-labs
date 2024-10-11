@@ -1,4 +1,4 @@
-/data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/build/CMakeFiles/main.dir
-/data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/build/CMakeFiles/tests.dir
-/data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/build/CMakeFiles/edit_cache.dir
-/data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/build/CMakeFiles/rebuild_cache.dir
+/home/pirum/University-labs/AP/lab_05/lab_05_0/build/CMakeFiles/main.dir
+/home/pirum/University-labs/AP/lab_05/lab_05_0/build/CMakeFiles/tests.dir
+/home/pirum/University-labs/AP/lab_05/lab_05_0/build/CMakeFiles/edit_cache.dir
+/home/pirum/University-labs/AP/lab_05/lab_05_0/build/CMakeFiles/rebuild_cache.dir

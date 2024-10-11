@@ -1,4 +1,5 @@
 #include <iostream>
+//#include "lab_05_0.hpp"
 
 using namespace std;
 
@@ -18,6 +19,6 @@ int main()
 
     cout << "c = " << c << endl;
 
-    system("pause");
+    //system("pause");
     return 0;
 }

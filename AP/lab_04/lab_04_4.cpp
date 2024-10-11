@@ -68,7 +68,7 @@ int main()
     }
     cout << "-----------------------------------------" << endl;
 
-   
+    std::cout << "TEST TEST!!!\n";   
 
     cin.get();
     return 0;

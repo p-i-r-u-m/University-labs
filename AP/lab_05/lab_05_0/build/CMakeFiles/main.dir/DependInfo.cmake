@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/src/lab_05_0.cpp" "CMakeFiles/main.dir/src/lab_05_0.cpp.o" "gcc" "CMakeFiles/main.dir/src/lab_05_0.cpp.o.d"
+  "/home/pirum/University-labs/AP/lab_05/lab_05_0/src/lab_05_0.cpp" "CMakeFiles/main.dir/src/lab_05_0.cpp.o" "gcc" "CMakeFiles/main.dir/src/lab_05_0.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

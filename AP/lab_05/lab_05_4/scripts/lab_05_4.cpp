@@ -54,6 +54,10 @@ int main()
     cout << "(rec up --)    S2 = " << S2(N, N)    << endl;
     cout << "(rec down ++)  S3 = " << S3(N, 1, 0) << endl;
     cout << "(rec down --)  S4 = " << S4(N, N, 0) << endl;
-
-    return 0;
+    
+  return 0;
 }
+
+
+
+

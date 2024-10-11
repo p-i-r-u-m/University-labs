@@ -46,6 +46,7 @@ int main()
             F = ((b * x) / (c - a));
     
     cout << "2) F = " << F << endl;
+    cout << "test";
 
     cin.get();
     return 0;

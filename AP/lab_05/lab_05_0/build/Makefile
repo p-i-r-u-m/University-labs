@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -45,30 +48,30 @@ cmake_force:
 # Set environment variables for the build.
 
 # The shell in which to execute make rules.
-SHELL = /data/data/com.termux/files/usr/bin/sh
+SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /data/data/com.termux/files/usr/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /data/data/com.termux/files/usr/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0
+CMAKE_SOURCE_DIR = /home/pirum/University-labs/AP/lab_05/lab_05_0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/build
+CMAKE_BINARY_DIR = /home/pirum/University-labs/AP/lab_05/lab_05_0/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/data/data/com.termux/files/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +81,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/data/data/com.termux/files/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +90,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/build/CMakeFiles /data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pirum/University-labs/AP/lab_05/lab_05_0/build/CMakeFiles /home/pirum/University-labs/AP/lab_05/lab_05_0/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/data/com.termux/files/home/Documents/AP/lab_05/lab_05_0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pirum/University-labs/AP/lab_05/lab_05_0/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -148,6 +151,7 @@ src/lab_05_0.o: src/lab_05_0.cpp.o
 # target to build an object file
 src/lab_05_0.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lab_05_0.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/lab_05_0.cpp.o
 .PHONY : src/lab_05_0.cpp.o
 
 src/lab_05_0.i: src/lab_05_0.cpp.i
@@ -156,6 +160,7 @@ src/lab_05_0.i: src/lab_05_0.cpp.i
 # target to preprocess a source file
 src/lab_05_0.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lab_05_0.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/lab_05_0.cpp.i
 .PHONY : src/lab_05_0.cpp.i
 
 src/lab_05_0.s: src/lab_05_0.cpp.s
@@ -164,6 +169,7 @@ src/lab_05_0.s: src/lab_05_0.cpp.s
 # target to generate assembly for a file
 src/lab_05_0.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lab_05_0.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/src/lab_05_0.cpp.s
 .PHONY : src/lab_05_0.cpp.s
 
 tests/test_lab_05_0.o: tests/test_lab_05_0.cpp.o

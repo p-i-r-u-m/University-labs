@@ -44,6 +44,8 @@ int main()
             cout << "[" << (i+1) << "]"<< setw(8) << setprecision(4) << x << "  "
                 << setw(8) << setprecision(4) << y << "  " << "no" << endl;
     }
+    
+    std::cout << "TEST TEST";
 
     cin.get();
     return 0;
