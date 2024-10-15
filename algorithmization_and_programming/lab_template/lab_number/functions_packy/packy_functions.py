@@ -1,5 +1,6 @@
 import os
 import subprocess
+import urllib
 
 # import library for email
 import smtplib
@@ -90,11 +91,11 @@ def run_verify():
     except subprocess.CalledProcessError as e:
         print(f"Error opening: {e}")
 
+
+
 def send_email():
-    
-    # Get users info
+    # Get user's info
     with open(data_packy_file, 'r', encoding='utf-8') as f:
-        
         sender_email = f.readline().strip()
         sender_password = f.readline().strip()
         receiver_email = f.readline().strip()
@@ -104,24 +105,32 @@ def send_email():
     attachment_path = os.path.join(report_dir, f"АП_РІ-12_Грушевський_ЛР-{lab_number}.docx")
     body = "Грушевський Іван РІ-12"
 
-        msg = MIMEMultipart()
-        msg['From'] = sender_email
-        msg['To'] = receiver_email
-        msg['Subject'] = subject
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
+    msg['Subject'] = subject
 
-        msg.attach(MIMEText(body, 'plain'))
+    msg.attach(MIMEText(body, 'plain'))
 
-    if attachment_path:
+    if os.path.isfile(attachment_path):  # Check if the file exists
         with open(attachment_path, "rb") as attachment:
-            part = MIMEBase("application", "octet-stream")
+            part = MIMEBase("application", "vnd.openxmlformats-officedocument.wordprocessingml.document")
             part.set_payload(attachment.read())
-        encoders.encode_base64(part)
-        part.add_header(
-            "Content-Disposition",
-            f"attachment; filename= {os.path.basename(attachment_path)}",
-        )
-        msg.attach(part)
-    
+            encoders.encode_base64(part)
+
+            # Get the filename
+            filename = os.path.basename(attachment_path)
+            print(f"Attachment Filename: {filename}")  # Debugging line
+
+            # Use filename directly for the header
+            part.add_header(
+                "Content-Disposition",
+                'attachment; filename="%s"' % os.path.basename(attachment_path))
+            msg.attach(part)
+    else:
+        print(f"Error: File does not exist: {attachment_path}")
+        return
+
     try:
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
             server.login(sender_email, sender_password)
@@ -129,4 +138,3 @@ def send_email():
         print("Email sent successfully!")
     except Exception as e:
         print(f"Error sending email: {e}")
-

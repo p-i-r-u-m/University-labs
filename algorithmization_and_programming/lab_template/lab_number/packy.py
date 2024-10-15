@@ -1,5 +1,5 @@
 import argparse
-from packy_functions.packy_functions import build_cmake, create_report, run_verify, send_email
+from functions_packy.packy_functions import build_cmake, create_report, run_verify, send_email
 
 def main():
 
@@ -28,8 +28,6 @@ def main():
     if args.email:
         print("Sending report...")
         send_email()
-        print("Email sended ^_^")
-        print("Well done!")
-
+        
 if __name__ == "__main__":
     main()
