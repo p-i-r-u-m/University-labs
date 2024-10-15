@@ -1,0 +1,30 @@
+Start testing: Oct 15 13:45 EEST
+----------------------------------------------------------
+1/1 Testing: TestTopic.HowWeTest
+1/1 Test: TestTopic.HowWeTest
+Command: "/home/pirum/University-labs/algorithmization_and_programming/lab_template/lab_number/build/tests/unit_tests" "--gtest_filter=TestTopic.HowWeTest" "--gtest_also_run_disabled_tests"
+Directory: /home/pirum/University-labs/algorithmization_and_programming/lab_template/lab_number/build/tests
+"TestTopic.HowWeTest" start time: Oct 15 13:45 EEST
+Output:
+----------------------------------------------------------
+Running main() from /home/pirum/University-labs/algorithmization_and_programming/lab_template/lab_number/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TestTopic.HowWeTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTopic
+[ RUN      ] TestTopic.HowWeTest
+[       OK ] TestTopic.HowWeTest (0 ms)
+[----------] 1 test from TestTopic (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TestTopic.HowWeTest" end time: Oct 15 13:45 EEST
+"TestTopic.HowWeTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 15 13:45 EEST
