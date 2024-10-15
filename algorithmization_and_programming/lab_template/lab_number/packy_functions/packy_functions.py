@@ -12,7 +12,9 @@ import shutil
 import argparse
 
 # Define directories
-project_dir = os.path.dirname(os.path.abspath(__file__))
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+project_dir = os.path.dirname(current_dir)
 report_dir = os.path.join(project_dir, "report")
 task_condition_dir = os.path.join(report_dir, "task_condition")
 tests_result_dir = os.path.join(report_dir, "tests_result")
@@ -31,7 +33,7 @@ def run_unit_tests():
 
         with open(tests_result_data, 'w', encoding='utf-8') as f:
             f.write(result.stdout)
-        print(f"Result saved to {tests_result}")
+        print(f"Result saved to {tests_result_data}")
 
     except subprocess.CalledProcessError as e:
         print(f"Error running tests: {e}")
@@ -40,9 +42,6 @@ def run_unit_tests():
 # Function to run CMake and build project 
 def build_cmake():
     try:
-        # Recreate build directory
-        shutil.rmtree(project_dir, "build")
-        os.mkdir(project_dir, "build")
         
         # Run commands to compile CMake
         subprocess.run(["cmake", "-S", ".", "-B", "build"], check=True)
@@ -55,9 +54,9 @@ def build_cmake():
 
 # Function to create report docx file
 def create_report():
-
+   
     # Enter lab info
-    lab_number = input("[Example: 06.1.іт]\n Enter lab number: ")
+    lab_number = input("[Example: 06.1.іт]\nEnter lab number: ")
     lab_theme_name = input("Enter lab theme name: ")
     lab_goal = input("Enter lab goal: ")
 
@@ -76,5 +75,5 @@ def create_report():
     run_unit_tests()
 
     # Creating report docx file
-    subprocess.run(['python3', 'auto_report_file'])
+    subprocess.run(['python3', f'{auto_report_file}'])
 

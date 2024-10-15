@@ -1,3 +1,4 @@
+import os
 from docx import Document
 from docx.shared import Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -5,6 +6,20 @@ from docx.shared import Inches
 
 # Create a new Document
 doc = Document()
+
+# Declare directories
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_dir = os.path.dirname(current_dir)
+
+# Construct the full path to files
+data_txt_path = os.path.join(current_dir, 'data.txt')
+condition_txt_path = os.path.join(current_dir, 'task_condition/data.txt')
+unit_result_txt_path = os.path.join(current_dir, 'tests_result/unit_result.txt')
+
+main_cpp_path = os.path.join(project_dir, 'src/main.cpp')
+functions_cpp_path = os.path.join(project_dir, 'lib/function.cpp')
+unit_tests_cpp_path = os.path.join(project_dir, 'tests/unit_tests.cpp')
+
 
 print("Start creating report file...")
 
@@ -14,8 +29,11 @@ print("Start creating report file...")
 
 print("Adding header of report...")
 
+# Construct the full path to data.txt
+data_txt_path = os.path.join(current_dir, 'data.txt')
+
 # Read the file with data about lab 
-with open('data.txt', 'r', encoding='utf-8') as file:
+with open(data_txt_path, 'r', encoding='utf-8') as file:
     # Read each line and assign to variables
     lab_number = file.readline().strip()
     lab_theme_name = file.readline().strip()
@@ -52,7 +70,7 @@ doc.add_heading(f'Мета: {lab_goal}')
 doc.add_heading('Умова завдання:', level=1)
 
 # Read the file with data about lab
-with open('task_condition/data.txt', 'r', encoding='utf-8') as file:
+with open(condition_txt_path, 'r', encoding='utf-8') as file:
     # Read the entire file content
     condition_text = file.read()
 
@@ -63,7 +81,8 @@ task_condition_run.font.name = 'Times New Roman'
 task_condition_run.font.size = Pt(12)
 
 # Add an image of task condition 
-task_condition_img_path = './task_condition/image.png'
+task_condition_img_path = os.path.join(current_dir, 'task_condition/image.png')
+
 doc.add_picture(task_condition_img_path, width=Inches(6))
 
 doc.add_page_break()
@@ -77,7 +96,8 @@ print("Adding structure diagram...")
 
 doc.add_heading('Структурна схема програми:', level=1)
 
-structure_img_path = './structure_uml/image.png'
+structure_img_path = condition_img_path = os.path.join(current_dir, 'structure_uml/image.png')
+
 doc.add_picture(structure_img_path, width=Inches(6))
 
 doc.add_page_break()
@@ -95,7 +115,7 @@ print("main.cpp ...")
 doc.add_heading('main.cpp', level=2)
 
 # Read main.cpp file
-with open('../src/main.cpp', 'r', encoding='utf-8') as file:
+with open(main_cpp_path, 'r', encoding='utf-8') as file:
     # Read the entire script 
     main_text = file.read()
 
@@ -112,7 +132,7 @@ print("function.cpp ...")
 doc.add_heading('function.cpp', level=2)
 
 # Read function.cpp file
-with open('../lib/function.cpp', 'r', encoding='utf-8') as file:
+with open(functions_cpp_path, 'r', encoding='utf-8') as file:
     # Read the entire script 
     function_text = file.read()
 
@@ -155,7 +175,7 @@ doc.add_heading('Результати unit-тесту:')
 doc.add_heading('unit_tests.cpp', level=2)
 
 # Read unit_tests.cpp file
-with open('../tests/unit_tests.cpp', 'r', encoding='utf-8') as file:
+with open(unit_tests_cpp_path, 'r', encoding='utf-8') as file:
     # Read the entire script 
     unit_text = file.read()
 
@@ -172,7 +192,7 @@ doc.add_page_break()
 doc.add_heading('Вивід unit-тесту:', level=2)
 
 # Read unit_result.txt file
-with open('tests_result/unit_result.txt', 'r', encoding='utf-8') as file:
+with open(unit_result_txt_path, 'r', encoding='utf-8') as file:
     # Read the entire script 
     result_text = file.read()
 
@@ -203,6 +223,6 @@ conclusion_run.font.size = Pt(12)
 
 
 # Save the Document
-doc.save(f'АП_РІ-12_Грушевський_ЛР-{lab_number}.docx')
+doc.save(f'{current_dir}/АП_РІ-12_Грушевський_ЛР-{lab_number}.docx')
 
 print(f"\nCreated АП_РІ-12_Грушевський_ЛР-{lab_number}.docx")

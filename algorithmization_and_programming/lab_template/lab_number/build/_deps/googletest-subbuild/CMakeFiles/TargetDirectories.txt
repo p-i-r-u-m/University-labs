@@ -1,3 +1,0 @@
-/home/pirum/University-labs/algorithmization_and_programming/lab_template/lab_number/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-/home/pirum/University-labs/algorithmization_and_programming/lab_template/lab_number/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
-/home/pirum/University-labs/algorithmization_and_programming/lab_template/lab_number/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir
