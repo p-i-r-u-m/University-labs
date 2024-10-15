@@ -5,3 +5,5 @@ data_packy.txt
 # Ignore all contents in any build directories
 build/
 **/build/
+
+**/__pycache__
