@@ -1,5 +1,5 @@
 import argparse
-from packy_functions.packy_functions import build_cmake, create_report
+from packy_functions.packy_functions import build_cmake, create_report, run_verify, send_email
 
 def main():
 
