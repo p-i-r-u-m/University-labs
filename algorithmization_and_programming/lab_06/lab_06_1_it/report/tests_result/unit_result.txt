@@ -1,0 +1,14 @@
+Internal ctest changing into directory: /home/pirum/University-labs/algorithmization_and_programming/lab_06/lab_06_1_it/build
+Test project /home/pirum/University-labs/algorithmization_and_programming/lab_06/lab_06_1_it/build
+    Start 1: CountTest.HandlesEvenIndexesAndNegativeValues
+    Start 2: CountTest.HandlesAllPositiveValues
+    Start 3: SumTest.HandlesNegativeAndEvenIndexes
+    Start 4: SumTest.HandlesAllPositiveValues
+1/4 Test #1: CountTest.HandlesEvenIndexesAndNegativeValues ...   Passed    0.01 sec
+2/4 Test #2: CountTest.HandlesAllPositiveValues ..............   Passed    0.01 sec
+3/4 Test #3: SumTest.HandlesNegativeAndEvenIndexes ...........   Passed    0.00 sec
+4/4 Test #4: SumTest.HandlesAllPositiveValues ................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.01 sec

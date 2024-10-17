@@ -1,0 +1,8 @@
+Internal ctest changing into directory: /home/pirum/University-labs/algorithmization_and_programming/lab_template/lab_number/build
+Test project /home/pirum/University-labs/algorithmization_and_programming/lab_template/lab_number/build
+    Start 1: TestTopic.HowWeTest
+1/1 Test #1: TestTopic.HowWeTest ..............   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec

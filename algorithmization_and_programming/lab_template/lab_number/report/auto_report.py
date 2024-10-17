@@ -83,7 +83,7 @@ task_condition_run.font.size = Pt(12)
 # Add an image of task condition 
 task_condition_img_path = os.path.join(current_dir, 'task_condition/image.png')
 
-doc.add_picture(task_condition_img_path, width=Inches(6))
+doc.add_picture(task_condition_img_path, width=Inches(2))
 
 doc.add_page_break()
 
@@ -98,7 +98,7 @@ doc.add_heading('Структурна схема програми:', level=1)
 
 structure_img_path = condition_img_path = os.path.join(current_dir, 'structure_uml/image.png')
 
-doc.add_picture(structure_img_path, width=Inches(6))
+doc.add_picture(structure_img_path, width=Inches(2))
 
 doc.add_page_break()
 

@@ -3,7 +3,8 @@
 if(BUILD_TESTING)
   add_executable(unit_tests unit_tests.cpp)
   target_link_libraries(unit_tests PRIVATE GTest::gtest_main)
-
+  target_link_libraries(unit_tests PRIVATE lib cxx_setup)
+  
   include(GoogleTest)
   # Finds all the Google tests associated with executable
   gtest_discover_tests(unit_tests)

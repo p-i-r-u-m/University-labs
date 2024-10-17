@@ -1,0 +1,24 @@
+Internal ctest changing into directory: /home/pirum/University-labs/algorithmization_and_programming/lab_06/lab_06_2_it/build
+Test project /home/pirum/University-labs/algorithmization_and_programming/lab_06/lab_06_2_it/build
+    Start 1: MaxIndexTest.HandlesNormalValues
+    Start 2: MaxIndexTest.HandlesAllNegativeValues
+    Start 3: MaxIndexTest.HandlesSingleElement
+    Start 4: MinIndexTest.HandlesNormalValues
+    Start 5: MinIndexTest.HandlesAllNegativeValues
+    Start 6: MinIndexTest.HandlesSingleElement
+    Start 7: AvarageTest.HandlesNormalIndices
+    Start 8: AvarageTest.HandlesSameIndices
+    Start 9: AvarageTest.HandlesNegativeIndices
+1/9 Test #1: MaxIndexTest.HandlesNormalValues ........   Passed    0.01 sec
+2/9 Test #2: MaxIndexTest.HandlesAllNegativeValues ...   Passed    0.01 sec
+3/9 Test #3: MaxIndexTest.HandlesSingleElement .......   Passed    0.01 sec
+4/9 Test #4: MinIndexTest.HandlesNormalValues ........   Passed    0.01 sec
+5/9 Test #5: MinIndexTest.HandlesAllNegativeValues ...   Passed    0.01 sec
+6/9 Test #6: MinIndexTest.HandlesSingleElement .......   Passed    0.01 sec
+7/9 Test #7: AvarageTest.HandlesNormalIndices ........   Passed    0.01 sec
+8/9 Test #8: AvarageTest.HandlesSameIndices ..........   Passed    0.00 sec
+9/9 Test #9: AvarageTest.HandlesNegativeIndices ......   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 9
+
+Total Test time (real) =   0.02 sec
