@@ -36,7 +36,7 @@ namespace lib {
 
     for (int i=0; i < size; i++)
     {
-      if (i%2 != 0 || a[i] > 0)
+      if (!(a[i] > 0 || i%2 != 0))
         number += 0;
       else
         number += 1;
@@ -52,7 +52,7 @@ namespace lib {
 
     for (int i=0; i < size; i++)
     {
-      if (i%2 != 0 || a[i] > 0)
+      if (!(a[i] > 0 || i%2 != 0))
         sum += 0;
       else
         sum += a[i];
@@ -66,7 +66,7 @@ namespace lib {
   {
     for (int i=0; i < size; i++)
     {
-      if (i%2 != 0 || a[i] > 0)
+      if (!(a[i] > 0 || i%2 != 0))
         a[i] = 0;
     }
   }

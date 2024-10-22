@@ -29,7 +29,7 @@ namespace lib {
   void Count(int *a, const int size, int &number, int i)
   {
 
-    if (i%2 != 0 || a[i] > 0)
+    if (!(a[i] > 0 || i%2 != 0))
     {
       number += 0;
     }
@@ -49,7 +49,7 @@ namespace lib {
   void Sum(int *a, const int size, int &sum, int i)
   {
 
-    if (i%2 != 0 || a[i] > 0)
+    if (!(a[i] > 0 || i%2 != 0))
       sum += 0;
     else
       sum += a[i];
@@ -63,7 +63,7 @@ namespace lib {
 
   void Modify(int *a, const int size, int i)
   {
-    if (i%2 != 0 || a[i] > 0)
+    if (!(a[i] > 0 || i%2 != 0))
       a[i] = 0;
 
     if (i<size-1)
