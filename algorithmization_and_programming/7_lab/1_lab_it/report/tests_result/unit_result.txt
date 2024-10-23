@@ -1,0 +1,10 @@
+Internal ctest changing into directory: /home/pirum/University-labs/algorithmization_and_programming/7_lab/1_lab_it/build
+Test project /home/pirum/University-labs/algorithmization_and_programming/7_lab/1_lab_it/build
+    Start 1: ArrayFunctionsTest.CountTest
+    Start 2: ArrayFunctionsTest.SumTest
+1/2 Test #1: ArrayFunctionsTest.CountTest .....   Passed    0.00 sec
+2/2 Test #2: ArrayFunctionsTest.SumTest .......   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.01 sec
