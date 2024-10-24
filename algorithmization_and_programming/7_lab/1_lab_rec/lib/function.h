@@ -1,6 +1,8 @@
 #pragma once
 namespace lib {
   // declare functions
+  
+  void Declaration(int** a, const int rowCount, const int colCount, int i);
 
   void Create(int** a, const int rowCount, const int colCount,
     const int Low, const int High, int i, int j);

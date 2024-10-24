@@ -10,6 +10,14 @@ using namespace std;
 
 namespace lib {
   // functions script
+  
+  void Declaration(int** a, const int rowCount, const int colCount, int i)
+  {
+    a[i] = new int [colCount];
+
+    if (i<rowCount-1)
+      Declaration(a, rowCount, colCount, i+1);
+  }
 
   void Create(int** a, const int rowCount, const int colCount,
       const int Low, const int High, int i, int j)

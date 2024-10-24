@@ -3,6 +3,9 @@
 
 // include libraries
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
 
 namespace lib {
   // functions script
@@ -25,5 +28,24 @@ namespace lib {
       cout << endl;
     }
     cout << endl;
+  }
+
+  int MaxElement(int** a, const int row, const int colCount)
+  {
+    int max = a[0][0];
+    for (int j=0; j<colCount; j++)
+      if (a[row][j] > max)
+        max = a[row][j];
+
+    return max;
+  }
+
+  int Sum(int** a, const int rowCount, const int colCount)
+  {
+    int sum = 0;
+    for (int i=1; i<rowCount; i+=2)
+      sum += MaxElement(a, i, colCount);
+
+    return sum;
   }
 }

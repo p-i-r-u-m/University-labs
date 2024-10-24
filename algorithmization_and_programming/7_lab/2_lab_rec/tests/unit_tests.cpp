@@ -30,7 +30,7 @@ TEST(SumFunctionTest, BasicTests) {
     }
 
     // Test cases for Sum function
-    EXPECT_EQ(lib::Sum(a, rowCount, colCount), 24); // Sum of max elements from rows 1 (8) and 3 (16)
+    EXPECT_EQ(lib::Sum(a, rowCount, colCount, 0, 1), 24); // Sum of max elements from rows 1 (8) and 3 (16)
 
     // Clean up the allocated memory
     for (int i = 0; i < rowCount; ++i) {

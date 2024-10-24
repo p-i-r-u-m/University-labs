@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
   // script
-  
+
   srand((unsigned)time(NULL));
 
   // variable declaration
@@ -27,7 +27,7 @@ int main() {
   } else if (Low >= High) {
     cout << "Low is not less than High" << endl;
     return 0;
-  }
+  } 
 
   // creation of 2D array
   int **a = new int*[rowCount];
@@ -39,7 +39,10 @@ int main() {
   lib::Create(a, rowCount, colCount, Low, High);
   lib::Print(a, rowCount, colCount);
 
-  cout << "Sum: " << lib::Sum(a, rowCount, colCount) << endl;
+  cout << "Multiply: " << lib::Multiply(a, rowCount, colCount)
+    << endl;
+
+  lib::Max(a, rowCount, colCount);
 
   // cleaning
   for (int i=0; i<rowCount; i++)
