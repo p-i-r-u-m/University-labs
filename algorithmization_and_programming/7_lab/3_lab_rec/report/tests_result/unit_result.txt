@@ -1,5 +1,5 @@
-Internal ctest changing into directory: /home/pirum/University-labs/algorithmization_and_programming/7_lab/3_lab_it/build
-Test project /home/pirum/University-labs/algorithmization_and_programming/7_lab/3_lab_it/build
+Internal ctest changing into directory: /home/pirum/University-labs/algorithmization_and_programming/7_lab/3_lab_rec/build
+Test project /home/pirum/University-labs/algorithmization_and_programming/7_lab/3_lab_rec/build
     Start 1: MultiplyTest.ValidRows
     Start 2: MultiplyTest.ContainsNegative
     Start 3: MultiplyTest.AllNegative
@@ -8,9 +8,9 @@ Test project /home/pirum/University-labs/algorithmization_and_programming/7_lab/
 1/5 Test #1: MultiplyTest.ValidRows ...........   Passed    0.01 sec
 2/5 Test #2: MultiplyTest.ContainsNegative ....   Passed    0.01 sec
 3/5 Test #3: MultiplyTest.AllNegative .........   Passed    0.01 sec
-4/5 Test #4: MultiplyTest.MixedRows ...........   Passed    0.00 sec
-5/5 Test #5: MultiplyTest.EmptyMatrix .........   Passed    0.00 sec
+4/5 Test #4: MultiplyTest.MixedRows ...........   Passed    0.01 sec
+5/5 Test #5: MultiplyTest.EmptyMatrix .........   Passed    0.01 sec
 
 100% tests passed, 0 tests failed out of 5
 
-Total Test time (real) =   0.01 sec
+Total Test time (real) =   0.02 sec
